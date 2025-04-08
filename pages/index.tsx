@@ -111,7 +111,7 @@ export default function Home() {
           imagem_base64: base64,
         };
 
-        const res = await fetch("https://respondeai.dirrocha.com/corrigir", {
+        const res = await fetch("https://api-respondeai.dirrocha.com/corrigir", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
