@@ -42,8 +42,8 @@ export default function NavbarComponent() {
   }
   const menuItems = [
     {name:"Inicio",ref:"/"},
-    {name:"Desenvolvedor",ref:"/Desenvolvedor"},
-    {name:"github",ref:"/github"},
+    {name:"Desenvolvedor",ref:"https://www.linkedin.com/in/marco-antonio-aa3024233"},
+    {name:"Github",ref:"https://github.com/marco0antonio0/RespondeAI-front"},
   ];
   const router = useRouter()
   const isActive = (path: string) => router.pathname === path;
@@ -69,7 +69,7 @@ export default function NavbarComponent() {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="https://www.linkedin.com/in/marco-antonio-aa3024233" className={`ml-5 ${
-              isActive("/Desenvolvedor") ? "text-primary" : "text-foreground"
+              isActive("https://www.linkedin.com/in/marco-antonio-aa3024233") ? "text-primary" : "text-foreground"
             }`}>
             Desenvolvedor
           </Link>
