@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen py-8 pb-20 gap-16 sm:py-0 font-[family-name:var(--font-geist-sans)]`}
+        className={`${geistSans.variable} ${geistMono.variable} grid items-center justify-items-center min-h-screen py-8 pb-20 gap-16 sm:py-0 font-[family-name:var(--font-geist-sans)]`}
       >
         <NavbarComponent />
         <Component {...pageProps} />
