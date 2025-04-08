@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import localFont from "next/font/local";
 import UserShowElement from "@/components/userShowElement";
-import {  Button,Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Spinner, useDisclosure, } from "@heroui/react";
+import {  Button,Dropdown,DropdownItem,DropdownMenu,DropdownTrigger,Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Spinner, useDisclosure, } from "@heroui/react";
 import SectionPromo from "@/components/section/promo";
 import SectionPost from "@/components/section/post";
 import Head from "next/head";
@@ -30,6 +30,22 @@ export default function Home() {
   const [questoes, setQuestoes] = useState<number[]>([1]);
   const [correcaoRealizada, setCorrecaoRealizada] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const gerarCartao = async (quantidade: string) => {
+    try {
+      const response = await fetch(`https://api-respondeai.dirrocha.com/gerar-cartao?quantidade=${quantidade}&marcar=false`);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", `cartao-${quantidade}-questoes.pdf`);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } catch (error) {
+      console.error("Erro ao gerar cartão:", error);
+    }
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const fileList = e.target.files;
@@ -165,12 +181,19 @@ export default function Home() {
           Com o RespondeAI, você automatiza a correção de provas com rapidez, precisão e praticidade. Dê adeus à contagem manual!
         </span>
         <div className="flex flex-row m-auto mt-8 gap-3">
-          <Button color="primary" variant="shadow" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]" onClick={onOpen}>
-            Scanear Gabarito
-          </Button>
-          <Button color="primary" variant="ghost" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]" onClick={() => { r.push('https://github.com/marco0antonio0/RespondeAI-front') }}>
-            Saiba mais
-          </Button>
+        <Button color="primary" variant="shadow" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]" onClick={onOpen}>
+          Scanear Gabarito
+        </Button>
+        <Dropdown>
+          <DropdownTrigger>
+            <Button color="primary" variant="ghost" className="w-[250px] h-[60px] lgi:w-[190px] lgi:h-[60px]">Gerar Gabarito</Button>
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Gerar Gabarito" onAction={(key) => gerarCartao(key as string)}>
+            <DropdownItem key="10">Gerar Gabarito 10 questões</DropdownItem>
+            <DropdownItem key="20">Gerar Gabarito 20 questões</DropdownItem>
+            <DropdownItem key="30">Gerar Gabarito 30 questões</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
         </div>
 
         <div className="flex flex-row-reverse gap-8 mt-16 mdi:flex-col">
