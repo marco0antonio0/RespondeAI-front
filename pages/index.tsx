@@ -173,7 +173,7 @@ export default function Home() {
     </Head>
 
     <div className={`${geistSans.variable} ${geistMono.variable} grid min-h-screen py-3 pb-20 gap-16 sm:px-0 font-[family-name:var(--font-geist-sans)]`}>
-      <div className="flex flex-col max-w-[1000px] mx-5 smi:mt-[-40px]">
+      <div className="flex flex-col max-w-[1000px] mx-3 smi:mt-[-40px]">
         <img src="/promo/promo.png" alt="" className="w-[350px] m-auto mdi:w-[300px]" />
         <h1 className="m-auto mt-[10px] text-[7mm] font-semibold text-[#8287eb] smi:text-[6mm]">Correção Automática em Segundos</h1>
         <h1 className="m-auto mt-[0] text-[10mm] font-semibold text-black text-center smi:text-[8mm]">Escaneie gabaritos com facilidade e precisão</h1>
