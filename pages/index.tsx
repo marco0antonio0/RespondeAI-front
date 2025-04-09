@@ -215,16 +215,16 @@ export default function Home() {
         </div>
 
         <div className="h-5"></div>
-        <h1 className="m-auto ml-0 mt-[10px] text-[7mm] font-semibold text-[#8287eb] smi:text-[6mm]">Criadores do RespondeAI</h1>
-        <div className="h-2"></div>
-        <div className="flex flex-wrap flex-row gap-3">
+        {/* <h1 className="m-auto ml-0 mt-[10px] text-[7mm] font-semibold text-[#8287eb] smi:text-[6mm]">Criadores do RespondeAI</h1>
+        <div className="h-2"></div> */}
+        {/* <div className="flex flex-wrap flex-row gap-3">
           <UserShowElement
             url="https://github.com/marco0antonio0"
             name="Marco Antonio"
             username="marco0antonio0"
             src="https://github.com/marco0antonio0.png?size=100px"
             text="Desenvolvedor fullstack apaixonado por IA, automação e soluções inteligentes voltadas para educação." />
-        </div>
+        </div> */}
 
         <p className="text-lg text-justify mt-10">
           Criado com a missão de facilitar o processo de correção de provas, o RespondeAI é uma ferramenta poderosa para educadores e instituições. Nossa solução oferece performance, precisão e praticidade, com base em inteligência artificial e visão computacional.

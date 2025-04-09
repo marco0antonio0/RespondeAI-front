@@ -42,8 +42,8 @@ export default function NavbarComponent() {
   }
   const menuItems = [
     {name:"Inicio",ref:"/"},
-    {name:"Desenvolvedor",ref:"https://www.linkedin.com/in/marco-antonio-aa3024233"},
-    {name:"Github",ref:"https://github.com/marco0antonio0/RespondeAI-front"},
+    {name:"Curiosidades",ref:"/curiosidades"},
+    {name:"Sobre",ref:"/sobre"},
   ];
   const router = useRouter()
   const isActive = (path: string) => router.pathname === path;
@@ -54,7 +54,7 @@ export default function NavbarComponent() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+        <NavbarBrand className="w-[250px]">
           <Logo />
         </NavbarBrand>
       </NavbarContent>
@@ -67,21 +67,20 @@ export default function NavbarComponent() {
             Inicio
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="https://www.linkedin.com/in/marco-antonio-aa3024233" className={`ml-5 ${
-              isActive("https://www.linkedin.com/in/marco-antonio-aa3024233") ? "text-primary" : "text-foreground"
-            }`}>
-            Desenvolvedor
-          </Link>
-        </NavbarItem>
         <NavbarItem >
-          <Link color="foreground" href="https://github.com/marco0antonio0/RespondeAI-front" className={`ml-5 ${
-              isActive("/github") ? "text-primary" : "text-foreground"
+          <Link color="foreground" href="/curiosidades" className={`ml-5 ${
+              isActive("/curiosidades") ? "text-primary" : "text-foreground"
             }`}>
-            Github
+            Curiosidades
           </Link>
         </NavbarItem>
-
+        <NavbarItem>
+          <Link color="foreground" href="/sobre" className={`ml-5 ${
+              isActive("/sobre") ? "text-primary" : "text-foreground"
+            }`}>
+            Sobre
+          </Link>
+        </NavbarItem>
       </NavbarContent>
       {dataUser.isLogin?null:
       <NavbarContent justify="end">
