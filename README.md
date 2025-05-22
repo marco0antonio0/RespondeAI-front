@@ -1,4 +1,5 @@
 # 🧠 RespondeAI Frontend
+![Group 1](https://github.com/user-attachments/assets/e93b3064-9d90-4a51-a1bf-20bcbd9f7591)
 
 Este é o frontend do projeto **RespondeAI**, uma aplicação SaaS para correção automatizada de cartões-resposta com inteligência artificial. Este repositório contém a interface web construída em **Next.js + React + Backend-python**, projetada para oferecer uma experiência fluida, moderna e intuitiva.
 
