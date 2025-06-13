@@ -33,7 +33,7 @@ export default function Home() {
 
   const gerarCartao = async (quantidade: string) => {
     try {
-      const response = await fetch(`https://api-respondeai.dirrocha.com/gerar-cartao?quantidade=${quantidade}&marcar=false`);
+      const response = await fetch(`https://api.respondeai.dirrocha.com/gerar-cartao?quantidade=${quantidade}&marcar=false`);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -127,7 +127,7 @@ export default function Home() {
           imagem_base64: base64,
         };
 
-        const res = await fetch("https://api-respondeai.dirrocha.com/corrigir", {
+        const res = await fetch("https://api.respondeai.dirrocha.com/corrigir", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
