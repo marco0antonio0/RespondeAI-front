@@ -21,7 +21,7 @@ const geistMono = localFont({
 export default function Home() {
   const r = useRouter()
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [erroMensagem, setErroMensagem] = useState<String|null>("");
+  const [erroMensagem, setErroMensagem] = useState<string | null>("");
   const [files, setFiles] = useState<File[]>([]);
   const [notas, setNotas] = useState<{ [key: string]: string }>({});
   const [respostas, setRespostas] = useState<{ [key: string]: string }>({});
