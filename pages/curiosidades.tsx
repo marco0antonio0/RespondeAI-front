@@ -29,29 +29,16 @@ export default function Sobre() {
         />
         <meta name="author" content="RespondeAI Team" />
 
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Perguntas Frequentes e Curiosidades - RespondeAI"
-        />
-        <meta
-          property="og:description"
-          content="Descubra como o RespondeAI simplifica a correção de provas e conheça curiosidades sobre nossa tecnologia de inteligência artificial."
-        />
-        <meta property="og:image" content="/promo/respondeai.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://respondeai.dirrocha.com/sobre" />
 
-        {/* Twitter Card */}
-        <meta
-          name="twitter:title"
-          content="Perguntas Frequentes e Curiosidades - RespondeAI"
-        />
-        <meta
-          name="twitter:description"
-          content="Descubra o que torna o RespondeAI único e como nossa tecnologia está revolucionando a correção de gabaritos."
-        />
-        <meta name="twitter:image" content="/promo/respondeai.png" />
+        <meta property="og:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
+        <meta property="og:description" content="Transforme a correção de provas com inteligência artificial. Corrija gabaritos com poucos cliques!" />
+        <meta property="og:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://respondeai.dirrocha.com/" />
+
+        <meta name="twitter:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
+        <meta name="twitter:description" content="Escaneie gabaritos e obtenha resultados em segundos com RespondeAI." />
+        <meta name="twitter:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com/curiosidades" /> 
         <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="icon" href="/favicon.ico" />

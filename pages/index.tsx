@@ -152,23 +152,27 @@ export default function Home() {
     setDetectedAnswers(novasRespostas);
     setLoading(false);
   };
-
+  const pageUrl = "https://respondeai.dirrocha.com/curiosidades";
+  const previewImageUrl = `https://metasnap.dirrocha.com/screenshot?url=${encodeURIComponent(pageUrl)}`;
 
   return (<>
-    <Head>
+      <Head>
       <title>RespondeAI - Correção Inteligente de Gabaritos</title>
       <meta name="description" content="Escaneie e corrija cartões-resposta automaticamente com RespondeAI. Simples, rápido e eficiente!" />
       <meta name="keywords" content="correção automática, cartões-resposta, gabarito digital, scanner de prova, IA educacional" />
       <meta name="author" content="Equipe RespondeAI" />
+
       <meta property="og:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
       <meta property="og:description" content="Transforme a correção de provas com inteligência artificial. Corrija gabaritos com poucos cliques!" />
-      <meta property="og:image" content="/promo/promoinicio.png" />
+      <meta property="og:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://respondeai.dirrocha.com/" />
+
       <meta name="twitter:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
       <meta name="twitter:description" content="Escaneie gabaritos e obtenha resultados em segundos com RespondeAI." />
-      <meta name="twitter:image" content="/promo/promoinicio.png" />
+      <meta name="twitter:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" /> 
       <meta name="twitter:card" content="summary_large_image" />
+
       <link rel="icon" href="/favicon.ico" />
     </Head>
 

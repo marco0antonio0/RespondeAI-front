@@ -30,26 +30,15 @@ export default function Sobre() {
         />
         <meta name="author" content="RespondeAI Team" />
 
-        {/* Open Graph - Para compartilhamento em redes sociais */}
-        <meta
-          property="og:title"
-          content="Sobre o RespondeAI - Nossa História"
-        />
-        <meta
-          property="og:description"
-          content="Descubra como o RespondeAI nasceu para simplificar a correção de provas, automatizando a contagem de respostas com precisão e rapidez."
-        />
-        <meta property="og:image" content="/promo/respondeai.png" />
+        <meta property="og:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
+        <meta property="og:description" content="Transforme a correção de provas com inteligência artificial. Corrija gabaritos com poucos cliques!" />
+        <meta property="og:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://respondeai.dirrocha.com/sobre" />
+        <meta property="og:url" content="https://respondeai.dirrocha.com/" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:title" content="Sobre o RespondeAI - Nossa História" />
-        <meta
-          name="twitter:description"
-          content="Transforme a correção de provas com RespondeAI. Conheça nossa história e como nossa tecnologia está mudando o cenário educacional."
-        />
-        <meta name="twitter:image" content="/promo/respondeai.png" />
+        <meta name="twitter:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
+        <meta name="twitter:description" content="Escaneie gabaritos e obtenha resultados em segundos com RespondeAI." />
+        <meta name="twitter:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com/sobre" /> 
         <meta name="twitter:card" content="summary_large_image" />
 
         <link rel="icon" href="/favicon.ico" />
