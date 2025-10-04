@@ -4,15 +4,8 @@ services:
   respondeai_frontend:
     build: .
     container_name: respondeai_frontend
-    expose:
-      - "3000"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.respondeai_frontend.rule=Host(`respondeai.dirrocha.com`)"
-      - "traefik.http.routers.respondeai_frontend.entrypoints=websecure"
-      - "traefik.http.routers.respondeai_frontend.tls=true"
-      - "traefik.http.routers.respondeai_frontend.tls.certresolver=letsEncrypt"
-      - "traefik.http.services.respondeai_frontend.loadbalancer.server.port=3000"
+    ports:
+      - "3334:3000"
     networks:
       - proxy
     restart: always
