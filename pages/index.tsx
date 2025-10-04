@@ -33,7 +33,7 @@ export default function Home() {
 
   const gerarCartao = async (quantidade: string) => {
     try {
-      const response = await fetch(`https://api.respondeai.dirrocha.com/gerar-cartao?quantidade=${quantidade}&marcar=false`);
+      const response = await fetch(`https://api-respondeai.opengena.com/gerar-cartao?quantidade=${quantidade}&marcar=false`);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -127,7 +127,7 @@ export default function Home() {
           imagem_base64: base64,
         };
 
-        const res = await fetch("https://api.respondeai.dirrocha.com/corrigir", {
+        const res = await fetch("https://api-respondeai.opengena.com/corrigir", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
@@ -152,8 +152,8 @@ export default function Home() {
     setDetectedAnswers(novasRespostas);
     setLoading(false);
   };
-  const pageUrl = "https://respondeai.dirrocha.com/curiosidades";
-  const previewImageUrl = `https://metasnap.dirrocha.com/screenshot?url=${encodeURIComponent(pageUrl)}`;
+  const pageUrl = "https://respondeai.opengena.com/curiosidades";
+  const previewImageUrl = `https://api-metasnap.opengena.com/screenshot?url=${encodeURIComponent(pageUrl)}`;
 
   return (<>
       <Head>
@@ -164,13 +164,13 @@ export default function Home() {
 
       <meta property="og:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
       <meta property="og:description" content="Transforme a correção de provas com inteligência artificial. Corrija gabaritos com poucos cliques!" />
-      <meta property="og:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" />
+      <meta property="og:image" content="https://api-metasnap.opengena.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://respondeai.dirrocha.com/" />
+      <meta property="og:url" content="https://respondeai.opengena.com/" />
 
       <meta name="twitter:title" content="RespondeAI - Correção Inteligente de Gabaritos" />
       <meta name="twitter:description" content="Escaneie gabaritos e obtenha resultados em segundos com RespondeAI." />
-      <meta name="twitter:image" content="https://metasnap.dirrocha.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" /> 
+      <meta name="twitter:image" content="https://api-metasnap.opengena.com/screenshot?url=https%3A%2F%2Frespondeai.dirrocha.com" /> 
       <meta name="twitter:card" content="summary_large_image" />
 
       <link rel="icon" href="/favicon.ico" />
