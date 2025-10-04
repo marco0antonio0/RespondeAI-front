@@ -9,7 +9,7 @@ services:
     networks:
       - proxy
     restart: always
-
+  
 networks:
   proxy:
     external: true
